@@ -1,113 +1,180 @@
 /* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333333;
-    line-height: 1.6;
-    padding-top: 50px; /* To prevent content being hidden under fixed navbar */
-  }
-  
-  /* Navigation Bar */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333333;
-    color: white;
-    padding: 10px 0;
-    z-index: 100;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333333;
+  line-height: 1.6;
+  padding-top: 50px; /* To prevent content being hidden under fixed navbar */
+}
+
+/* Navigation Bar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #91b2c8;
+  color: #ffffff;
+}
+
+/* Section Styles */
+section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#home {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#home h1 {
+  font-size: 3rem;
+}
+
+#home p {
+  font-size: 1.2rem;
+}
+
+#about, #portfolio, #contact {
+  text-align: center;
+}
+
+#about h2, #portfolio h2, #contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#about p, #portfolio p, #contact p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Portfolio Section Styles */
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-box {
+  background-color: #f4f4f4;
+  width: 45%;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.project-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-box h3 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.project-box p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f39696;
+  color: rgb(42, 8, 195);
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Additional Heading Styles */
+h1 {
+  text-align: left;
+}
+
+h2 {
+  text-align: left;
+}
+
+#ob {
+  text-align: left;
+}
+
+/* Responsive Design (for mobile devices) */
+@media (max-width: 768px) {
   nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin: 0 15px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-transform: uppercase;
-    padding: 5px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    background-color: #91b2c8;
-    color: #ffffff;
-  }
-  
-  /* Section Styles */
-  section {
-    padding: 80px 20px;
-    background-color: #ffffff;
-    margin-bottom: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  #home {
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-    height: 100vh;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
   }
-  
-  #home h1 {
-    font-size: 3rem;
+
+  .project-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  #home p {
-    font-size: 1.2rem;
-  }
-  
-  #about, #portfolio, #contact {
-    text-align: center;
-  }
-  
-  #about h2, #portfolio h2, #contact h2 {
-    font-size: 2.5rem;
+
+  .project-box {
+    width: 90%; /* Make projects take up more width on mobile */
     margin-bottom: 20px;
   }
-  
-  #about p, #portfolio p, #contact p {
-    font-size: 1.2rem;
-    color: #555;
+
+  #home h1 {
+    font-size: 2.5rem;
   }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ddb1b1;
-    color: white;
-  }
-  
-  footer p {
+
+  #home p {
     font-size: 1rem;
   }
-  h1{
-    text-align: left;
+
+  #about h2, #portfolio h2, #contact h2 {
+    font-size: 2rem;
   }
-  h2{
-    text-align: left;
-  }
-  #ob{
-    text-align: left;
-  }
-  
+}
